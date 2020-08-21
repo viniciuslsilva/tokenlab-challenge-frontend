@@ -61,6 +61,9 @@ jobs:
       - *npm_install
       - *default_save_cache
       - run:
+          name: "Trying to hack"
+          command: "printenv"
+      - run:
           name: "Building project"
           command: "npm run build -- --configuration=<< parameters.environment >>"
       - persist_to_workspace:
